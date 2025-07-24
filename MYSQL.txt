@@ -1,0 +1,76 @@
+MYSQL :
+
+SQL -- RDBMS -> Table , Rows , Coloumns(MYSQL , Oracle DB , PG , Maria DB)
+NOSQL -- Non RDBMS -> Collection of    (MongoDB ,)
+
+1.DDL --> Data Defination Language
+2.DQL --> Data Query Language
+3.DML --> Data Manipulate Language
+4.DCL & TCL  --> Data Control Language & Transition Control Language
+
+DDL :
+Create
+Drop
+Alter
+Truncate
+
+2. DQL :
+Select
+
+3. DML :
+Insert
+Update
+Delete
+These all are data & row
+
+4. DCL & TCL :
+Commit
+RollBack
+Savepoint
+Grant
+Revoke
+
+
+
+
+COMMANDS : 
+
+
+mysql -uroot -proot
+
+system cls;
+
+show databases;
+
+	CREATING A DATABASE
+
+  CREATE DATABASE dbone;
+  USE dbone;
+  show tables;
+
+	CREATING A TABLE 
+
+  CREATE TABLE employees();    
+  CREATE TABLE employees(        // creating a employees table in the dbone database
+  eid int,
+  ename VARCHAR(32),
+  esal float
+  );
+
+____________________________________________________________________________________________
+
+  INSERTING A VALUE INTO TABLE			
+
+  INSERT INTO employees VALUES  (101,'Rahul',45000.45); //inserting a value in employees 							  table
+
+  INSERT INTO employees VALUES (102,'SG',55000.55),
+  (103,'PG',65000.65),
+  (104,'NM',75000.75);
+
+____________________________________________________________________________________________
+
+  ALTER :
+
+  ALTER TABLE employees ADD email varchar(30);  // add a email column in the employees table
+ 
+  ALTER TABLE employees DROP COLUMN email;      // to delete a email column in the employees 						   table
