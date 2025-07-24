@@ -1,0 +1,20 @@
+CRUD OPERATION:
+
+
+CREATING A DATABASE :
+   
+CREATE DATABASE dbtwo;
+use dbtwo;
+
+CREATE TABLE employees(eid int, ename varchar(32), esal float, age int); //creating a table
+
+INSERT INTO employees (eid, ename, esal, age) VALUES (101, "Kalai", 50000,20),(102,"John",3000,20),(103,"Jenith",60000,21); //inserting a value
+
+
+SELECT * FROM employees   // to show the table.
+
+ALTER table employees add column eplace varchar(20); // adding a new column
+
+UPDATE employees SET eplace = "Theni" WHERE eid = 101; //updating the values in tables.
+
+DELETE FROM employees WHERE eid = 105;  // deleting the row in the table
