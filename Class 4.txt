@@ -1,0 +1,90 @@
+class-4
+-------
+mysql -uroot -proot
+system cls;
+show databases;
+DROP DATABASE dbtwo
+CREATE DATABASE db4
+USE db4;
+
+show tables;
+
+CREATE TABLE employees();
+	CREATE TABLE employees(
+	eid INT NOT NULL,
+	ename  VARCHAR(32) UNIQUE,
+	esal FLOAT NOT NULL,
+	age INT check(age>=18),  
+	loc VARCHAR(32) DEFAULT 'Bangalore'
+);
+
+DESC employees;
+
+INSERT INTO employees(ename,esal,age)
+VALUES
+('Rahul',45000.45,52);
+Error - eid NOT null, ie. NULL VALUES are NOT allowed
+
+INSERT INTO employees
+VALUES
+(101,'Rahul',45000.45,52,'Wayanad');
+
+INSERT INTO employees
+VALUES
+(101,'Rahul',45000.45,52,'Wayanad');
+
+how TO INSERT NULL values?
+
+INSERT INTO employees(eid,esal,age,loc)
+VALUES
+(101,55000.55,42,'New Delhi');
+
+
+INSERT INTO employees(eid,esal,age)
+VALUES
+(101,55000.55,78);
+===================================
+INSERT INTO employees(eid,esal)
+VALUES
+(211,15000.15),
+(211,15000.15),
+(211,15000.15),
+(211,15000.15),
+(211,15000.15);
+============
+
+
+CREATE TABLE bunit();
+CREATE TABLE employees(); 
+
+
+CREATE TABLE bunit(
+	b_id int, 
+	b_Name VARCHAR(32) NOT NULL,
+	head_office VARCHAR(32) NOT NULL,
+	PRIMARY KEY(b_id)
+);
+
+CREATE TABLE employees(
+eid INT,
+ename VARCHAR(32) NOT NULL,
+esal FLOAT NOT NULL, 
+bu_Id int,
+loc VARCHAR(32) DEFAULT 'Bangalore', 
+age INT CHECK(age>=18),
+PRIMARY KEY(eid),
+FOREIGN KEY(bu_Id) REFERENCES bunit(b_id)
+); 
+
+INSERT INTO bunit
+VALUES
+(1002,'COLT','London');
+
+INSERT INTO employees
+VALUES
+(101,'RG',45000.45,1002,'Wayanad',52);
+
+INSERT INTO employees
+VALUES
+(102,'SG',55000.45,1002,'ND',72),
+(103,'PG',65000.45,1002,'ND',42);
